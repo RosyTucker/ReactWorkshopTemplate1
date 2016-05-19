@@ -1,0 +1,22 @@
+{
+  "name": "codenight-react",
+  "version": "0.0.1",
+  "description": "Codenight Frontend",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RosyTucker/CodeNightFrontend.git"
+  },
+  "keywords": [
+    "codenight"
+  ],
+  "author": "Rose Tucker",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RosyTucker/CodeNightFrontend/issues"
+  },
+  "homepage": "https://github.com/RosyTucker/CodeNightFrontend#readme"
+}
