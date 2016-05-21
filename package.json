@@ -9,7 +9,7 @@
     "test": "npm run lint && npm run unit",
     "build": "webpack",
     "build-prod": "webpack -p",
-    "start": "node server.js",
+    "start": "babel-node server.js",
     "dev": "npm run build && webpack-dev-server --port 3000 --content-base dist/ --inline --hot --noInfo"
   },
   "repository": {
