@@ -20,8 +20,10 @@ const babelLoader = {
 };
 
 const sassLoader = {
+    name: 'css',
     test: /\.scss$/,
-    loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader!sass-loader')
+    exclude: /node_modules/,
+    loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader')
 };
 
 const sassPlugin = new ExtractTextPlugin('application.css', { allChunks: false });
