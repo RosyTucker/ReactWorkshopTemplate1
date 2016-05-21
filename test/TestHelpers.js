@@ -44,6 +44,8 @@ const ComponentHelpers = {
     }
 };
 
+const Sandbox = () => sinon.sandbox.create();
+
 export {
     React,
     ReactDOM,
@@ -51,5 +53,6 @@ export {
     expect,
     sinon,
     PromiseHelper,
-    ComponentHelpers
+    ComponentHelpers,
+    Sandbox
 };

@@ -3,7 +3,7 @@ Babel ES6 + Webpack + React
 # Setup
 
 - Install Node 6.0
-- Run './setup.sh'
+- Run `npm run setup`
 
 # Run Dev Server
 
