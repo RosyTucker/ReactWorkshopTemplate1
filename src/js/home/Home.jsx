@@ -1,10 +1,10 @@
 import React from 'react';
 import Nav from '../navigation/Nav';
 
-const App = () => (
+const Home = () => (
     <div className="home">
         <Nav />
     </div>
 );
 
-export default App;
+export default Home;
