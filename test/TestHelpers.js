@@ -5,7 +5,7 @@ import * as Enzyme from 'enzyme';
 
 chai.use(sinonChai);
 
-const {expect} = chai;
+const { expect } = chai;
 const React = require('react');
 const ReactDOM = require('react-dom');
 

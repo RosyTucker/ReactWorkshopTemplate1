@@ -1,6 +1,5 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const webpack = require('webpack');
 
 const babelLoader = {
     loader: 'babel-loader',
@@ -11,7 +10,8 @@ const babelLoader = {
     }
 };
 
-const htmlPlugin = new HtmlWebpackPlugin({
+const htmlPlugin = new HtmlWebpackPlugin(
+    {
         title: 'CodeNight',
         filename: 'index.html',
         template: 'index.ejs'
