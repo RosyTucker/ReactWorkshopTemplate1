@@ -25,6 +25,10 @@
     "url": "https://github.com/RosyTucker/CodeNightFrontend/issues"
   },
   "homepage": "https://github.com/RosyTucker/CodeNightFrontend#readme",
+  "engines": {
+    "node": "6.2.0",
+    "npm" : "3.8.9"
+  },
   "devDependencies": {
     "babel-core": "6.4.5",
     "babel-loader": "6.2.4",
