@@ -8,10 +8,9 @@
     "lint": "eslint -c .eslintrc .",
     "unit": "mocha test --recursive --compilers js:babel-register --timeout 5000",
     "test": "npm run lint && npm run unit",
-    "build": "webpack",
-    "dev-server": "webpack-dev-server --port 3000 --content-base dist/ --inline --hot --noInfo",
-    "dev": "npm run build && npm run dev-server",
-    "build-prod": "webpack -p",
+    "build": "rm -rf dist && webpack",
+    "dev": "npm run build && ./scripts/devServer.sh",
+    "build-prod": "rm -rf dist && webpack -p",
     "deploy": "./scripts/deployHeroku.sh",
     "start": "node server.js"
   },
