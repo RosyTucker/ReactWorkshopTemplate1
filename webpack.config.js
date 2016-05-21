@@ -7,8 +7,7 @@ const appPath = suffix => path.resolve(__dirname, suffix);
 const PATHS = {
     js: appPath('src/js'),
     sass: appPath('src/sass'),
-    jsEntry: appPath('src/js/main.js'),
-    cssEntry: appPath('src/sass/home.scss')
+    jsEntry: appPath('src/js/main.js')
 };
 
 const babelLoader = {
@@ -22,7 +21,7 @@ const babelLoader = {
 const sassLoader = {
     name: 'css',
     test: /\.scss$/,
-    exclude: /node_modules/,
+    include: PATHS.sass,
     loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader')
 };
 
@@ -38,8 +37,7 @@ module.exports = [
     {
         entry: [
             'babel-polyfill',
-            PATHS.jsEntry,
-            PATHS.cssEntry
+            PATHS.jsEntry
         ],
         output: {
             path: 'dist/client',

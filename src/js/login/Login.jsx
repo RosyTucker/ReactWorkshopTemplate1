@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import Nav from '../navigation/Nav';
 import { attemptLogin } from '../common/actionCreator';
 
+import '../../sass/login.scss';
+
 const Login = ({ onLoginClicked, user }) => (
     <div className="login">
         <Nav />
