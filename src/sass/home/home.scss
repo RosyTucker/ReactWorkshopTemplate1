@@ -1,2 +1,68 @@
+@import "../util/spacing.scss";
+@import "../util/variables.scss";
+
+$featured-attendee-padding: 20px;
+$featured-attendee-inner-margin: 0 20px;
+$featured-attendee-avatar-margin: 20px;
+$featured-content-margin: 20px;
+
 .home {
+
+  .featured-content {
+    border-bottom: thin solid $divider-color;
+    margin: $featured-content-margin;
+
+    .featured-attendee {
+      @include margin-responsive();
+      padding: $featured-attendee-padding;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      > * {
+        margin: $featured-attendee-inner-margin;
+      }
+
+      blockquote.featured-attendee-description {
+        flex: 1 1 0;
+        font-size: $medium-font-size;
+        font-weight: $light-font-weight;
+
+        &:before {
+          display: block;
+          content: "\201C";
+          font-size: 80px;
+          position: absolute;
+          left: -20px;
+          top: -20px;
+          color: #7a7a7a;
+        }
+        cite {
+          flex: 1 1 0;
+          display: block;
+          color: $light-text-color;
+          font-size: $small-font-size;
+          margin-top: 5px;
+          text-align: right;
+
+          &:before {
+            content: "\2014 \2009";
+          }
+        }
+      }
+
+      .avatar-container {
+
+        text-align: right;
+        margin: $featured-attendee-avatar-margin;
+        .avatar {
+          width: 150px;
+          height: 150px;
+          border-radius: 50%;
+          border: thin solid $primary-color;
+        }
+      }
+    }
+  }
 }

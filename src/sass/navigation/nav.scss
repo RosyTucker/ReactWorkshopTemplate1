@@ -19,12 +19,12 @@ $item-margin: 0 2px;
 
     li a {
       display: inline-block;
-      color: $light-text-color;
+      color: $lightest-text-color;
       padding: $item-padding;
       margin: $item-margin;
 
       &:hover {
-        background: $light-text-color;
+        background: $lightest-text-color;
         color: $primary-color;
       }
     }
