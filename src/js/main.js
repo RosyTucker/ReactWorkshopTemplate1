@@ -6,6 +6,8 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import Router from './common/Router';
 import reducers from './common/reducers';
 
+import '../sass/main.scss';
+
 const store = createStore(
     reducers,
     compose(
