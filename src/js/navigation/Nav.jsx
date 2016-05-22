@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router';
 import { AppRoutes } from '../common/Constants';
 
+import '../../sass/nav.scss';
+
 const NavItem = props => (
     <li><Link to={props.route}>{props.title}</Link></li>
 );
