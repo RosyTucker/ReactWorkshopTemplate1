@@ -2,12 +2,15 @@ import React from 'react';
 import { Router, Route, hashHistory } from 'react-router';
 import { AppRoutes } from './Constants';
 import Login from '../login/Login';
-import App from '../home/Home';
+import Home from '../home/Home';
+import AppWithNav from '../navigation/AppWithNav';
 
 const AppRouter = () => (
     <Router history={hashHistory}>
-        <Route path={AppRoutes.home} component={App} />
-        <Route path={AppRoutes.login} component={Login} />
+        <Route component={AppWithNav}>
+            <Route path={AppRoutes.home} component={Home} />
+            <Route path={AppRoutes.login} component={Login} />
+        </Route>
     </Router>
 );
 

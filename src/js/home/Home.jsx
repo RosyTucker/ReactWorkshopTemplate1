@@ -1,12 +1,17 @@
 import React from 'react';
-import Nav from '../navigation/Nav';
+import Banner from './Banner';
+import Strings from '../common/Strings';
 
-import '../../sass/home.scss';
+import bannerImg from '../../images/homeBanner.jpg';
+import '../../sass/home/home.scss';
 
-const Home = () => (
-    <div className="home">
-        <Nav />
-    </div>
-);
+const Home = () => {
+    const { bannerTitle, bannerSubtitle } = Strings.home;
+    return (
+        <div className="home">
+            <Banner imgSrc={bannerImg} title={bannerTitle} subtitle={bannerSubtitle} />
+        </div>
+    );
+};
 
 export default Home;

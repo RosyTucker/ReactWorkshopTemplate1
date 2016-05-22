@@ -1,15 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Nav from '../navigation/Nav';
 import { attemptLogin } from '../common/actionCreator';
+import Strings from '../common/Strings';
 
-import '../../sass/login.scss';
+import '../../sass/login/login.scss';
 
 const Login = ({ onLoginClicked, user }) => (
     <div className="login">
-        <Nav />
-        <button onClick={onLoginClicked}>Login With Github</button>
-        Hello {user.name}
+        <button className="login-button" onClick={onLoginClicked}>
+            {Strings.login.buttonText}
+        </button>
+        {user.name ? <span className="user-name">Hello {user.name}</span> : null}
     </div>
 );
 
@@ -25,5 +26,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
     onLoginClicked: () => dispatch(attemptLogin())
 });
+
+export { Login };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Login);

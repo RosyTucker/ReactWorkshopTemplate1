@@ -1,0 +1,14 @@
+@mixin margin-responsive() {
+  @media only screen and (min-width : 480px) {
+    margin: 0 10%;
+  }
+
+  @media only screen and (min-width : 768px) {
+    margin: 0 15%;
+  }
+
+  @media only screen and (min-width : 992px) {
+    margin: 0 25%;
+
+  }
+}

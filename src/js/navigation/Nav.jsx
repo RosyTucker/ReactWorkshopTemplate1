@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router';
 import { AppRoutes } from '../common/Constants';
+import Strings from '../common/Strings';
 
-import '../../sass/nav.scss';
+import '../../sass/navigation/nav.scss';
 
 const NavItem = props => (
     <li><Link to={props.route}>{props.title}</Link></li>
@@ -15,9 +16,9 @@ NavItem.propTypes = {
 
 const Nav = () => (
     <div className="nav">
-        <ul className="nav-items">
-            <NavItem title="Home" route={AppRoutes.home} />
-            <NavItem title="Login" route={AppRoutes.login} />
+        <ul>
+            <NavItem title={Strings.nav.home} route={AppRoutes.home} />
+            <NavItem title={Strings.nav.login} route={AppRoutes.login} />
         </ul>
     </div>
 );

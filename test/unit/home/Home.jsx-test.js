@@ -1,23 +1,33 @@
-import { React, expect, Enzyme, Sandbox, ComponentHelpers } from '../../TestHelpers';
+import { React, expect, Sandbox, ComponentHelpers, Enzyme } from '../../TestHelpers';
 import Home from '../../../src/js/home/Home';
-import Nav from '../../../src/js/navigation/Nav';
+import Banner from '../../../src/js/home/Banner';
+import Strings from '../../../src/js/common/Strings';
+import bannerImg from '../../../src/images/homeBanner.jpg';
 
 describe('Home.jsx', () => {
     let home;
     const sandbox = new Sandbox();
 
     beforeEach(() => {
-        ComponentHelpers.stub(sandbox, Nav);
+        ComponentHelpers.stub(sandbox, Banner);
+        sandbox.stub(bannerImg);
 
-        const app = Enzyme.shallow(<Home />);
-        home = app.find('.home');
+        home = Enzyme.shallow(<Home />);
     });
 
-    it('should contain a home div', () => {
-        expect(home).to.have.length(1);
+    it('should contain a login div', () => {
+        expect(home.hasClass('home')).to.equal(true);
     });
 
-    it('should contain a nav', () => {
-        expect(home.contains(<Nav />)).to.equal(true);
+    it('should contain a banner', () => {
+        const banners = home.find(Banner);
+
+        expect(banners).to.have.length(1);
+
+        const banner = banners.first();
+
+        expect(banner.props().imgSrc).to.equal(bannerImg);
+        expect(banner.props().title).to.equal(Strings.home.bannerTitle);
+        expect(banner.props().subtitle).to.equal(Strings.home.bannerSubtitle);
     });
 });
