@@ -7,7 +7,9 @@ const appPath = suffix => path.resolve(__dirname, suffix);
 const PATHS = {
     js: appPath('src/js'),
     sass: appPath('src/sass'),
-    jsEntry: appPath('src/js/main.js')
+    jsEntry: appPath('src/js/main.js'),
+    htmlTemplate: appPath('src/templates/index.ejs'),
+    outputJsFolder: appPath('dist/client')
 };
 
 const babelLoader = {
@@ -30,7 +32,7 @@ const sassPlugin = new ExtractTextPlugin('application.css', { allChunks: false }
 const htmlPlugin = new HtmlWebpackPlugin({
     title: 'CodeNight',
     filename: 'index.html',
-    template: 'templates/index.ejs'
+    template: PATHS.htmlTemplate
 });
 
 module.exports = [
@@ -40,7 +42,7 @@ module.exports = [
             PATHS.jsEntry
         ],
         output: {
-            path: 'dist/client',
+            path: PATHS.outputJsFolder,
             filename: 'bundle.js'
         },
         resolve: {
