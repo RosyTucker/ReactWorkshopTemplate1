@@ -54,6 +54,7 @@
     "mocha": "2.4.5",
     "node-sass": "3.7.0",
     "postcss-loader": "0.9.1",
+    "postcss-scss": "0.1.8",
     "precss": "1.4.0",
     "react-addons-test-utils": "15.0.2",
     "redux-devtools": "3.3.1",

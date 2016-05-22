@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin'); // Generate index.html
 const ExtractTextPlugin = require('extract-text-webpack-plugin'); // Create external CSS file
 const autoprefixer = require('autoprefixer'); // Cross browser compatibility
 const precss = require('precss'); // SASS -> CSS
+const scssSyntax = require('postcss-scss'); // mixins
 
 const appPath = suffix => path.resolve(__dirname, suffix);
 
@@ -28,14 +29,13 @@ const sassLoader = {
     name: 'css',
     test: /\.scss$/,
     include: PATHS.sass,
-    loader: ExtractTextPlugin.extract('style', 'css!postcss')
+    loader: ExtractTextPlugin.extract('style', 'css!sass!')
 };
 
 const fontLoader = {
     test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
     loader: 'file-loader'
 };
-
 
 const imageLoader = {
     test: /\.(jpg|png)$/,
@@ -68,6 +68,6 @@ module.exports = [
         module: {
             loaders: [babelLoader, sassLoader, fontLoader, imageLoader]
         },
-        postcss: [precss, autoprefixer({ browsers: ['> 5%'] })]
+        postcss: [precss, scssSyntax, autoprefixer({ browsers: ['> 5%'] })]
     }
 ];
