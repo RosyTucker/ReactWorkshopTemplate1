@@ -10,6 +10,7 @@ const appPath = suffix => path.resolve(__dirname, suffix);
 const PATHS = {
     js: appPath('src/js'),
     sass: appPath('src/sass'),
+    images: appPath('src/images'),
     jsEntry: appPath('src/js/main.js'),
     htmlTemplate: appPath('src/templates/index.ejs'),
     outputJsFolder: appPath('dist/client')
@@ -28,6 +29,18 @@ const sassLoader = {
     test: /\.scss$/,
     include: PATHS.sass,
     loader: ExtractTextPlugin.extract('style', 'css!postcss')
+};
+
+const fontLoader = {
+    test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
+    loader: 'file-loader'
+};
+
+
+const imageLoader = {
+    test: /\.(jpg|png)$/,
+    loader: 'file-loader',
+    include: PATHS.images
 };
 
 const sassPlugin = new ExtractTextPlugin('application.css', { allChunks: false });
@@ -53,7 +66,7 @@ module.exports = [
         },
         plugins: [htmlPlugin, sassPlugin],
         module: {
-            loaders: [babelLoader, sassLoader]
+            loaders: [babelLoader, sassLoader, fontLoader, imageLoader]
         },
         postcss: [precss, autoprefixer({ browsers: ['> 5%'] })]
     }
