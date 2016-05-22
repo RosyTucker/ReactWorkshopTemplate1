@@ -1,5 +1,7 @@
 Babel ES6 + Webpack + React
 
+![Build Status](https://snap-ci.com/RosyTucker/CodeNightFrontend/branch/master/build_image)
+
 # Setup
 
 - Install Node 6.0
