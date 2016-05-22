@@ -1,7 +1,8 @@
 export default {
     nav: {
-        login: 'Log in',
-        home: 'Home'
+        login: 'Sign in',
+        home: 'Home',
+        problems: 'Problems'
     },
     home: {
         bannerAlt: 'Banner',
@@ -9,6 +10,6 @@ export default {
         bannerSubtitle: 'Solve problems together and code, whatever your background'
     },
     login: {
-        buttonText: 'Login with GitHub'
+        buttonText: 'Sign in with GitHub'
     }
 };

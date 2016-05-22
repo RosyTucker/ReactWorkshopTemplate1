@@ -1,16 +1,58 @@
 @import "../util/spacing.scss";
 @import "../util/variables.scss";
 
-$featured-attendee-padding: 20px;
+$featured-attendee-padding: 30px;
 $featured-attendee-inner-margin: 0 20px;
-$featured-attendee-avatar-margin: 20px;
-$featured-content-margin: 20px;
+$featured-attendee-avatar-margin: 0 20px;
+$content-margin: 0 20px 30px 20px;
+
+@mixin call-to-action() {
+  $button-padding: 20px 30px;
+  $button-margin: 30px 20px;
+  margin: $button-margin;
+  background-color: $primary-color;
+  border: thin solid $dark-primary-color;
+  color: $lightest-text-color;
+  padding: $button-padding;
+  font-weight: $light-font-weight;
+  font-size: $large-font-size;
+  text-decoration: none;
+  text-shadow: 0;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: $dark-primary-color;
+  }
+}
 
 .home {
+  .login-container {
+    @include margin-responsive();
+    text-align: center;
+    .login-button {
+      @include call-to-action();
+    }
+  }
+
+  .mission-statement {
+    margin: $content-margin;
+    @include margin-responsive();
+    text-align: center;
+    p {
+      font-size: $large-font-size;
+      font-weight: normal;
+      margin: 5px 0;
+      em {
+        font-size: $large-font-size;
+        font-weight: normal;
+        color: $primary-color;
+      }
+    }
+  }
 
   .featured-content {
     border-bottom: thin solid $divider-color;
-    margin: $featured-content-margin;
+    margin: $content-margin;
 
     .featured-attendee {
       @include margin-responsive();
@@ -53,12 +95,11 @@ $featured-content-margin: 20px;
       }
 
       .avatar-container {
-
         text-align: right;
         margin: $featured-attendee-avatar-margin;
         .avatar {
-          width: 150px;
-          height: 150px;
+          width: 120px;
+          height: 120px;
           border-radius: 50%;
           border: thin solid $primary-color;
         }

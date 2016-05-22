@@ -22,13 +22,23 @@ const Home = () => {
                         asymmetrical jean shorts forage, narwhal cronut flexitarian PBR&B iPhone
                         heirloom tacos kale chips dreamcatcher paleo. Irony meggings ethical pop-up
                         banh mi hella. Paleo bitters dreamcatcher, cronut normcore art party beard
-                        +1 squid semiotics chicharrones intelligentsia. Hashtag meggings YOLO,
-                        pickled next level roof party gentrify fap taxidermy authentic. Tumblr
-                        post-ironic single-origin coffee, affogato butcher artisan tousled yuccie
-                        everyday carry farm-to-table readymade.
+                        +1 squid semiotics chicharrones intelligentsia.
                         <cite>Rose Tucker</cite>
                     </blockquote>
                 </div>
+            </div>
+            <div className="mission-statement">
+                <p>
+                    We aim to do <em>cool things</em>. Skateboard paleo asymmetrical, shoreditch
+                    fapwilliamsburg cardigan selvage taxidermy. Cardigan pitchfork <em>twee 90's
+                    butcher</em>. Mustache YOLO godard post-ironic stumptown, selfies retro bicycle
+                    rights <em>hoodie</em> flannel.
+                </p>
+            </div>
+            <div className="login-container">
+                <button className="login-button">
+                    {Strings.login.buttonText}
+                </button>
             </div>
         </div>
     );
