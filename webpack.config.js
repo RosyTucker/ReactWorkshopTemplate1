@@ -27,7 +27,7 @@ const sassLoader = {
     name: 'css',
     test: /\.scss$/,
     include: PATHS.sass,
-    loader: ExtractTextPlugin.extract('style','css!postcss')
+    loader: ExtractTextPlugin.extract('style', 'css!postcss')
 };
 
 const sassPlugin = new ExtractTextPlugin('application.css', { allChunks: false });
