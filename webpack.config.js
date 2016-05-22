@@ -1,6 +1,9 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+const HtmlWebpackPlugin = require('html-webpack-plugin'); // Generate index.html
+const ExtractTextPlugin = require('extract-text-webpack-plugin'); // Create external CSS file
+const autoprefixer = require('autoprefixer'); // Cross browser compatibility
+const precss = require('precss'); // SASS -> CSS
 
 const appPath = suffix => path.resolve(__dirname, suffix);
 
@@ -24,7 +27,7 @@ const sassLoader = {
     name: 'css',
     test: /\.scss$/,
     include: PATHS.sass,
-    loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader')
+    loader: ExtractTextPlugin.extract('style','css!postcss')
 };
 
 const sassPlugin = new ExtractTextPlugin('application.css', { allChunks: false });
@@ -51,6 +54,7 @@ module.exports = [
         plugins: [htmlPlugin, sassPlugin],
         module: {
             loaders: [babelLoader, sassLoader]
-        }
+        },
+        postcss: [precss, autoprefixer({ browsers: ['> 5%'] })]
     }
 ];

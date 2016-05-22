@@ -9,7 +9,8 @@
     "unit": "./scripts/unitTest.sh",
     "test": "npm run lint && npm run unit",
     "build": "rm -rf dist && webpack",
-    "dev": "npm run build && ./scripts/devServer.sh",
+    "dev-server": "./scripts/devServer.sh",
+    "dev": "npm run build && npm run dev-server",
     "build-prod": "rm -rf dist && webpack -p",
     "deploy": "./scripts/deployHeroku.sh",
     "start": "node server.js"
@@ -52,6 +53,7 @@
     "mocha": "2.4.5",
     "node-sass": "3.7.0",
     "postcss-loader": "0.9.1",
+    "precss": "1.4.0",
     "react-addons-test-utils": "15.0.2",
     "redux-devtools": "3.3.1",
     "sass-loader": "3.2.0",
@@ -59,7 +61,7 @@
     "sinon-chai": "2.8.0",
     "style-loader": "0.13.1",
     "webpack": "2.1.0-beta.7",
-    "webpack-dev-server": "1.14.1"
+    "webpack-dev-server": "2.1.0-beta.0"
   },
   "dependencies": {
     "express": "4.13.4",
