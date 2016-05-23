@@ -1,5 +1,5 @@
 import { React, expect, Sandbox, ComponentHelpers, Enzyme } from '../../TestHelpers';
-import Home from '../../../src/js/home/Home';
+import { Home } from '../../../src/js/home/Home';
 import Banner from '../../../src/js/home/Banner';
 import Strings from '../../../src/js/common/Strings';
 import bannerImg from '../../../src/images/homeBanner.jpg';

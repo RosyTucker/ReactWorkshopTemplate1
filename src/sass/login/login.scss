@@ -1,31 +1,8 @@
 @import "../util/spacing.scss";
-@import "../util/variables.scss";
-
-$button-padding: 20px;
-$button-margin: 5px;
-
-@mixin call-to-action() {
-  margin: $button-margin;
-  background-color: $accent-color;
-  border: thin solid $dark-accent-color;
-  color: $lightest-text-color;
-  padding: $button-padding;
-  text-decoration: none;
-  text-shadow: 0;
-  text-transform: uppercase;
-
-  &:hover {
-    background-color: $dark-accent-color;
-  }
-}
 
 .login {
   display: flex;
   justify-content: center;
   padding-top: 70px;
   @include margin-responsive();
-
-  .login-button {
-    @include call-to-action();
-  }
 }

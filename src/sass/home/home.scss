@@ -6,32 +6,10 @@ $featured-attendee-inner-margin: 0 20px;
 $featured-attendee-avatar-margin: 0 20px;
 $content-margin: 0 20px 30px 20px;
 
-@mixin call-to-action() {
-  $button-padding: 20px 30px;
-  $button-margin: 30px 20px;
-  margin: $button-margin;
-  background-color: $primary-color;
-  border: thin solid $dark-primary-color;
-  color: $lightest-text-color;
-  padding: $button-padding;
-  font-weight: $light-font-weight;
-  font-size: $large-font-size;
-  text-decoration: none;
-  text-shadow: 0;
-  text-transform: uppercase;
-
-  &:hover {
-    background-color: $dark-primary-color;
-  }
-}
-
 .home {
   .login-container {
     @include margin-responsive();
     text-align: center;
-    .login-button {
-      @include call-to-action();
-    }
   }
 
   .mission-statement {
@@ -46,63 +24,6 @@ $content-margin: 0 20px 30px 20px;
         font-size: $large-font-size;
         font-weight: normal;
         color: $primary-color;
-      }
-    }
-  }
-
-  .featured-content {
-    border-bottom: thin solid $divider-color;
-    margin: $content-margin;
-
-    .featured-attendee {
-      @include margin-responsive();
-      padding: $featured-attendee-padding;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-
-      > * {
-        margin: $featured-attendee-inner-margin;
-      }
-
-      blockquote.featured-attendee-description {
-        flex: 1 1 0;
-        font-size: $medium-font-size;
-        font-weight: $light-font-weight;
-
-        &:before {
-          display: block;
-          content: "\201C";
-          font-size: 80px;
-          position: absolute;
-          left: -20px;
-          top: -20px;
-          color: #7a7a7a;
-        }
-        cite {
-          flex: 1 1 0;
-          display: block;
-          color: $light-text-color;
-          font-size: $small-font-size;
-          margin-top: 5px;
-          text-align: right;
-
-          &:before {
-            content: "\2014 \2009";
-          }
-        }
-      }
-
-      .avatar-container {
-        text-align: right;
-        margin: $featured-attendee-avatar-margin;
-        .avatar {
-          width: 120px;
-          height: 120px;
-          border-radius: 50%;
-          border: thin solid $primary-color;
-        }
       }
     }
   }

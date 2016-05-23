@@ -1,15 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { attemptLogin } from '../common/actionCreator';
-import Strings from '../common/Strings';
-
+import LoginButton from './LoginButton';
 import '../../sass/login/login.scss';
 
 const Login = ({ onLoginClicked, user }) => (
     <div className="login">
-        <button className="login-button" onClick={onLoginClicked}>
-            {Strings.login.buttonText}
-        </button>
+        <LoginButton onClick={onLoginClicked} />
         {user.name ? <span className="user-name">Hello {user.name}</span> : null}
     </div>
 );
