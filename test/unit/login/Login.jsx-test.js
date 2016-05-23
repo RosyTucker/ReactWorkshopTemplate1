@@ -1,6 +1,6 @@
 import { React, expect, sinon, Enzyme, ComponentHelpers, Sandbox } from '../../TestHelpers';
 import { Login } from '../../../src/js/login/Login';
-import LoginButton from '../../../src/js/login/LoginButton';
+import LoginButton from '../../../src/js/home/LoginButton';
 
 describe('Login.jsx', () => {
     const sandbox = new Sandbox();

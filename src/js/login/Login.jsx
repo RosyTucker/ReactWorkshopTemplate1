@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { attemptLogin } from '../common/actionCreator';
-import LoginButton from './LoginButton';
+import LoginButton from '../home/LoginButton';
 import '../../sass/login/login.scss';
 
 const Login = ({ onLoginClicked, user }) => (

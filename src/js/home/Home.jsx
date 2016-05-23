@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { attemptLogin } from '../common/actionCreator';
 import Banner from './Banner';
 import FeaturedContent from './FeaturedContent';
-import LoginButton from '../login/LoginButton';
+import LoginButton from './LoginButton';
 
 import '../../sass/home/home.scss';
 import bannerImg from '../../images/homeBanner.jpg';
