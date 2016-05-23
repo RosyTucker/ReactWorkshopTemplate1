@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import { createStore, applyMiddleware, compose } from 'redux';
-import Router from './common/Router';
+import Router from './Router';
 import reducers from './common/reducers';
 
 import '../sass/main.scss';
