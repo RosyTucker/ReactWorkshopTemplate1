@@ -15,7 +15,7 @@ describe('Home.jsx', () => {
         home = Enzyme.shallow(<Home />);
     });
 
-    it('should contain a login div', () => {
+    it('should contain a user div', () => {
         expect(home.hasClass('home')).to.equal(true);
     });
 

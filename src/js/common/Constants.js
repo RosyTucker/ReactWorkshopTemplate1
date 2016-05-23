@@ -1,6 +1,6 @@
 const AppRoutes = {
     home: '/',
-    login: '/login'
+    login: '/user'
 };
 
 const ActionTypes = {
