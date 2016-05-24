@@ -19,7 +19,7 @@ const Nav = () => (
         <ul>
             <NavItem title={Strings.nav.home} route={AppRoutes.home} />
             <NavItem title={Strings.nav.problems} route={AppRoutes.home} />
-            <NavItem title={Strings.nav.login} route={AppRoutes.login} />
+            <NavItem title={Strings.nav.userHome} route={AppRoutes.userHome} />
         </ul>
     </div>
 );

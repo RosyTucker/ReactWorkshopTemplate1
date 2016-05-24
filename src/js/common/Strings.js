@@ -2,7 +2,8 @@ export default {
     nav: {
         login: 'Sign in',
         home: 'Home',
-        problems: 'Problems'
+        problems: 'Problems',
+        userHome: 'Your Profile'
     },
     home: {
         bannerAlt: 'Banner',
@@ -22,7 +23,7 @@ export default {
             '1 squid semiotics chicharrones intelligentsia.'
         }
     },
-    login: {
+    userHome: {
         buttonText: 'Sign in with GitHub'
     }
 };

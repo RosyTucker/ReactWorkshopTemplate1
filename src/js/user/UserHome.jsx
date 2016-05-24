@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import '../../sass/user/userHome.scss';
 
 const UserHome = ({ user }) => (
-    <div className="login">
+    <div className="userHome">
         {user.name ? <span className="user-name">Hello {user.name}</span> : null}
     </div>
 );

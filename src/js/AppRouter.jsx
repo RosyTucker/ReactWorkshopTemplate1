@@ -11,7 +11,7 @@ const AppRouter = () => (
         <Route component={AppWithNav}>
             <Route path={AppRoutes.home} component={Home} />
             <Route component={LoggedInApp} >
-                <Route path={AppRoutes.login} component={Login} />
+                <Route path={AppRoutes.userHome} component={Login} />
             </Route>
         </Route>
     </Router>

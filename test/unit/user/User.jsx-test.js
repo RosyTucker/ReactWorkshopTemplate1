@@ -12,7 +12,7 @@ describe('User.jsx', () => {
 
     it('should be a user div', () => {
         expect(userHome.type()).to.equal('div');
-        expect(userHome.hasClass('login')).to.equal(true);
+        expect(userHome.hasClass('userHome')).to.equal(true);
     });
 
     it('should say hello if the user has a name', () => {
