@@ -13,7 +13,7 @@ const Home = ({ onLoginClicked }) => {
     const { bannerTitle, bannerSubtitle, featuredContent } = Strings.home;
     return (
         <div className="home">
-            <Banner imgSrc={bannerImg} title={bannerTitle} subtitle={bannerSubtitle}/>
+            <Banner imgSrc={bannerImg} title={bannerTitle} subtitle={bannerSubtitle} />
             <FeaturedContent {...featuredContent} />
             <div className="mission-statement">
                 <p>{Strings.home.missionStatement}</p>
