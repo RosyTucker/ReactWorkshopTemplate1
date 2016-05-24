@@ -12,7 +12,7 @@ const PATHS = {
     js: appPath('src/js'),
     sass: appPath('src/sass'),
     images: appPath('src/images'),
-    jsEntry: appPath('src/js/main.js'),
+    jsEntry: appPath('src/js/app.js'),
     htmlTemplate: appPath('src/templates/index.ejs'),
     outputJsFolder: appPath('dist/client')
 };
