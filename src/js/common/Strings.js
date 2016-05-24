@@ -1,4 +1,5 @@
 export default {
+    signInButton: 'Sign in with GitHub',
     nav: {
         login: 'Sign in',
         home: 'Home',
@@ -22,8 +23,5 @@ export default {
             'banh mi hella. Paleo bitters dreamcatcher, cronut normcore art party beard ' +
             '1 squid semiotics chicharrones intelligentsia.'
         }
-    },
-    userHome: {
-        buttonText: 'Sign in with GitHub'
     }
 };
