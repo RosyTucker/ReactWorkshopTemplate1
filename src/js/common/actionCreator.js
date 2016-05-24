@@ -1,4 +1,5 @@
 import { ActionTypes } from './Constants';
+import AppRoutes from '../navigation/AppRoutes';
 
 const receiveUser = user => ({
     type: ActionTypes.RECEIVE_USER,

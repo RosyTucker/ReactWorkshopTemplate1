@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
-import { AppRoutes } from '../common/Constants';
+import AppRoutes from './AppRoutes';
 import Strings from '../common/Strings';
 
 import '../../sass/navigation/nav.scss';

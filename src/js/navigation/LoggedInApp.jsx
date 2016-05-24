@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { AppRoutes } from '../common/Constants';
+import AppRoutes from '../navigation/AppRoutes';
 
 class LoggedInApp extends React.Component {
     componentWillMount() {
