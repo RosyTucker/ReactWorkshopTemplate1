@@ -1,9 +1,9 @@
-import { React, expect, Enzyme } from '../../TestHelpers';
+import { expect } from '../../TestHelpers';
 import { ActionTypes } from '../../../src/js/common/Constants';
 import reducers from '../../../src/js/common/reducers';
 
 describe('reducers.js', () => {
-    it('should set the user in the state to an empty object if action type is not receive user', () => {
+    it('should set user to an empty object if action type is not receive user', () => {
         const action = { type: 'NOT_RECEIVE_USER' };
 
         const updatedState = reducers(undefined, action);
