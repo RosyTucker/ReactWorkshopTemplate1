@@ -1,18 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router';
-import AppRoutes from './AppRoutes';
+import NavItem from '../navigation/NavItem';
 import Strings from '../common/Strings';
+import AppRoutes from './AppRoutes';
 
 import '../../sass/navigation/nav.scss';
-
-const NavItem = props => (
-    <li><Link to={props.route}>{props.title}</Link></li>
-);
-
-NavItem.propTypes = {
-    title: React.PropTypes.string,
-    route: React.PropTypes.string.isRequired
-};
 
 const Nav = () => (
     <div className="nav">
