@@ -1,13 +1,13 @@
 import React from 'react';
 
 import '../../sass/home/featuredContent.scss';
-import featuredAttendee from '../../images/attendantAvatar.jpg';
+import featuredAttendeeImg from '../../images/attendantAvatar.jpg';
 
 const FeaturedContent = ({ name, description }) => (
     <div className="featured-content">
         <div className="featured-attendee">
             <div className="avatar-container">
-                <img alt={name} className="avatar" src={featuredAttendee}/>
+                <img alt={name} className="avatar" src={featuredAttendeeImg} />
             </div>
             <blockquote className="featured-attendee-description">
                 {description}
