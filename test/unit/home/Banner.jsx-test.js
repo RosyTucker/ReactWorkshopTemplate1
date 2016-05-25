@@ -20,27 +20,25 @@ describe('Banner.jsx', () => {
     });
 
     it('should contain an img with alt and src', () => {
-        const img = banner.find('img').first();
+        const img = banner.find('img');
 
+        expect(img).to.have.length(1);
         expect(img.props().src).to.equal(imgSrc);
         expect(img.props().alt).to.equal(Strings.home.bannerAlt);
     });
 
     it('should contain a banner message', () => {
-        const bannerMessage = banner.find('.banner-message').first();
-
+        const bannerMessage = banner.find('.banner-message');
+        expect(bannerMessage).to.have.length(1);
         expect(bannerMessage.type()).to.equal('div');
 
-        const headings = bannerMessage.find('h1');
-        expect(headings).to.have.length(1);
-
-        const heading = headings.first();
+        const heading = bannerMessage.find('h1');
+        expect(heading).to.have.length(1);
         expect(heading).to.not.equal(undefined);
         expect(heading.text()).to.equal(title);
 
-        const subHeadings = bannerMessage.find('h2');
-        expect(subHeadings).to.have.length(1);
-        const subHeading = subHeadings.first();
+        const subHeading = bannerMessage.find('h2');
+        expect(subHeading).to.have.length(1);
         expect(subHeading.text()).to.equal(subtitle);
     });
 });

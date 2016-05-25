@@ -25,23 +25,18 @@ describe('Home.jsx', () => {
     });
 
     it('should contain a banner', () => {
-        const banners = home.find(Banner);
+        const banner = home.find(Banner);
 
-        expect(banners).to.have.length(1);
-
-        const banner = banners.first();
-
+        expect(banner).to.have.length(1);
         expect(banner.props().imgSrc).to.equal(bannerImg);
         expect(banner.props().title).to.equal(Strings.home.bannerTitle);
         expect(banner.props().subtitle).to.equal(Strings.home.bannerSubtitle);
     });
 
     it('should contain featured content', () => {
-        const featuredContents = home.find(FeaturedContent);
+        const featuredContent = home.find(FeaturedContent);
 
-        expect(featuredContents).to.have.length(1);
-
-        const featuredContent = featuredContents.first();
+        expect(featuredContent).to.have.length(1);
 
         expect(featuredContent.props().name).to.equal(
             Strings.home.featuredContent.name
@@ -52,11 +47,9 @@ describe('Home.jsx', () => {
     });
 
     it('should contain a mission statement ', () => {
-        const missionStatementContainers = home.find('.mission-statement');
+        const missionStatementContainer = home.find('.mission-statement');
 
-        expect(missionStatementContainers).to.have.length(1);
-
-        const missionStatementContainer = missionStatementContainers.first();
+        expect(missionStatementContainer).to.have.length(1);
 
         expect(missionStatementContainer.text()).to.equal(
             Strings.home.missionStatement
@@ -64,11 +57,9 @@ describe('Home.jsx', () => {
     });
 
     it('should contain a login button ', () => {
-        const loginButtonContainers = home.find('.login-container');
+        const loginButtonContainer = home.find('.login-container');
 
-        expect(loginButtonContainers).to.have.length(1);
-
-        const loginButtonContainer = loginButtonContainers.first();
+        expect(loginButtonContainer).to.have.length(1);
 
         expect(loginButtonContainer.find(LoginButton)).to.have.length(1);
     });
@@ -76,7 +67,9 @@ describe('Home.jsx', () => {
     it('should call login clicked on login clicked', () => {
         const loginButton = home.find(LoginButton);
 
-        loginButton.first().simulate('click');
+        expect(loginButton).to.have.length(1);
+
+        loginButton.simulate('click');
 
         expect(onLoginClicked.calledOnce).to.equal(true);
     });
