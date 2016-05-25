@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import { createStore, applyMiddleware, compose } from 'redux';
-
+import { hashHistory } from 'react-router';
 import Router from './navigation/AppRouter';
 import reducers from './common/reducers';
 
@@ -19,7 +19,7 @@ const store = createStore(
 
 render(
     <Provider store={store}>
-        <Router />
+        <Router history={hashHistory} />
     </Provider>,
     document.getElementById('app')
 );
