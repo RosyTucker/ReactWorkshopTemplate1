@@ -1,4 +1,4 @@
-import { React, expect, Enzyme, sinon } from '../../TestHelpers';
+import { React, expect, Enzyme } from '../../TestHelpers';
 import AppWithNav from '../../../src/js/navigation/AppWithNav';
 import Nav from '../../../src/js/navigation/Nav';
 

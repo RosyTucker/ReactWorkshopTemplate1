@@ -15,7 +15,7 @@ describe('LoggedInApp.jsx', () => {
 
     it('should be a div with children when logged in', () => {
         loggedInApp = Enzyme.shallow(
-            <LoggedInApp history={history} isLoggedIn={true}>{children}</LoggedInApp>
+            <LoggedInApp history={history} isLoggedIn >{children}</LoggedInApp>
         );
 
         expect(loggedInApp.type()).to.equal('div');

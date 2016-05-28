@@ -61,7 +61,6 @@ describe('FeaturedContent.jsx', () => {
 
             const quotee = quoteContainer.find('cite');
             expect(quotee.text()).to.equal(name);
-
         });
     });
 });

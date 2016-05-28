@@ -1,4 +1,4 @@
-import { React, expect, Enzyme, Sandbox, sinon, ComponentHelpers } from '../../TestHelpers';
+import { React, expect, Enzyme, Sandbox, ComponentHelpers } from '../../TestHelpers';
 import { Router, Route } from 'react-router';
 import AppRouter from '../../../src/js/navigation/AppRouter';
 import AppWithNav from '../../../src/js/navigation/AppWithNav';
