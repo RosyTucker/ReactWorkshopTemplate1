@@ -24,6 +24,15 @@ describe('LoggedInApp.jsx', () => {
         expect(loggedInApp.contains(<div className="some-logged-in-thing"></div>)).to.equal(true);
     });
 
+    it('should not render the children when not logged in', () => {
+        loggedInApp = Enzyme.shallow(
+            <LoggedInApp history={history} isLoggedIn={false}>{children}</LoggedInApp>
+        );
+
+        expect(loggedInApp.type()).to.equal('div');
+        expect(loggedInApp.children()).to.have.length(0);
+    });
+
     it('should kick user back to home when not logged in', () => {
         loggedInApp = Enzyme.shallow(
             <LoggedInApp history={history} isLoggedIn={false}>{children}</LoggedInApp>

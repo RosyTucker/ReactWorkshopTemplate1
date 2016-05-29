@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import AppRoutes from '../navigation/AppRoutes';
 
+
 class LoggedInApp extends React.Component {
     componentWillMount() {
         if (!this.props.isLoggedIn) {
@@ -9,13 +10,16 @@ class LoggedInApp extends React.Component {
         }
     }
 
+    renderLoggedIn() {
+        return (<div className="logged-in-app">{this.props.children}</div>);
+    }
+
+    renderNotLoggedIn() {
+        return <div></div>;
+    }
+
     render() {
-        return (
-            <div className="logged-in-app">
-                Logged in
-                {this.props.children}
-            </div>
-        );
+        return this.props.isLoggedIn ? this.renderLoggedIn() : this.renderNotLoggedIn();
     }
 }
 
