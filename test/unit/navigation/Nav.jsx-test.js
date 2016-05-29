@@ -18,11 +18,21 @@ describe('Nav.jsx', () => {
 
     it('should be a container with a list', () => {
         expect(nav.type()).to.equal('div');
-        expect(nav.hasClass('nav'));
+        expect(nav.hasClass('nav')).to.equal(true);
+        expect(nav.hasClass('opaque')).to.equal(true);
 
         const list = nav.find('ul');
         expect(list).to.have.length(1);
     });
+
+    it('should change opaque class  to clear if isClear is set', () => {
+        nav = Enzyme.shallow(<Nav isClear />);
+
+        expect(nav.hasClass('nav')).to.equal(true);
+        expect(nav.hasClass('clear')).to.equal(true);
+        expect(nav.hasClass('opaque')).to.equal(false);
+    });
+
 
     it('should contain a home nav item as item 0', () => {
         const list = nav.find('ul');
@@ -39,7 +49,7 @@ describe('Nav.jsx', () => {
         const homeItem = list.childAt(1);
         expect(homeItem.type()).to.equal(NavItem);
         expect(homeItem.props().title).to.equal(Strings.nav.problems);
-        expect(homeItem.props().route).to.equal(AppRoutes.problemsHome);
+        expect(homeItem.props().route).to.equal(AppRoutes.problems);
     });
 
     it('should contain a problems nav item as item 2', () => {
@@ -47,7 +57,7 @@ describe('Nav.jsx', () => {
 
         const homeItem = list.childAt(2);
         expect(homeItem.type()).to.equal(NavItem);
-        expect(homeItem.props().title).to.equal(Strings.nav.userHome);
-        expect(homeItem.props().route).to.equal(AppRoutes.userHome);
+        expect(homeItem.props().title).to.equal(Strings.nav.profile);
+        expect(homeItem.props().route).to.equal(AppRoutes.profile);
     });
 });

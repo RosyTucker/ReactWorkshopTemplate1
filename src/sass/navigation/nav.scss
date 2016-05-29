@@ -30,3 +30,11 @@ $item-margin: 0 2px;
     }
   }
 }
+
+.nav.clear {
+  background: transparent;
+}
+
+.nav.opaque {
+  background: $dark-background-color;
+}
