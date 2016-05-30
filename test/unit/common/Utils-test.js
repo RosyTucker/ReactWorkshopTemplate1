@@ -4,17 +4,16 @@ import Utils from '../../../src/js/common/Utils';
 describe('Utils.js', () => {
     describe('formattedDate', () => {
         it('should return a formatted date', () => {
-            const date = 'Sat June 13 2016 18:30:00 GMT+0100 (BST)';
-
+            const date = '2016-06-13T09:54:51';
             expect(Utils.formattedDate(date)).to.equal('13th Jun 16');
         });
     });
 
     describe('formattedTime', () => {
         it('should return a formatted date', () => {
-            const date = 'Sat June 13 2016 18:30:00 GMT+0100 (BST)';
+            const date = '2015-04-13T09:54:51';
 
-            expect(Utils.formattedTime(date)).to.equal('18:30 pm');
+            expect(Utils.formattedTime(date)).to.equal('09:54 am');
         });
     });
 });

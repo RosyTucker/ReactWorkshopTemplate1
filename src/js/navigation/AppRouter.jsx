@@ -1,20 +1,23 @@
 import React from 'react';
-import { Router, Route, hashHistory } from 'react-router';
+import { Router, Route, Redirect } from 'react-router';
 import AppRoutes from './AppRoutes';
 import AppWithNav from './AppWithNav';
 import LoggedInApp from './LoggedInApp';
-import Login from '../user/UserHome';
+import Profile from '../user/Profile';
 import Home from '../home/Home';
 import ProblemsHome from '../problems/ProblemsHome';
+import WorkshopDetail from '../workshop/WorkshopDetail';
 
 const AppRouter = ({ history }) => (
     <Router history={history}>
         <Route component={AppWithNav}>
             <Route path={AppRoutes.home} component={Home} />
-            <Route path={AppRoutes.problemsHome} component={ProblemsHome} />
+            <Route path={AppRoutes.problems} component={ProblemsHome} />
             <Route component={LoggedInApp} >
-                <Route path={AppRoutes.userHome} component={Login} />
+                <Route path={AppRoutes.profile} component={Profile} />
+                <Route path={AppRoutes.workshops} component={WorkshopDetail} />
             </Route>
+            <Redirect from="*" to={AppRoutes.home} />
         </Route>
     </Router>
 );

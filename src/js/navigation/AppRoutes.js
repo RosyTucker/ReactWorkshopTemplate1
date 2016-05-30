@@ -1,5 +1,6 @@
 export default {
     home: '/',
-    userHome: '/user',
-    problemsHome: '/problems'
+    profile: '/profile',
+    problems: '/problems',
+    workshops: '/workshop/:id'
 };

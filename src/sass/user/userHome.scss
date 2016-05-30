@@ -1,8 +1,0 @@
-@import "../util/spacing.scss";
-
-.userHome {
-  display: flex;
-  justify-content: center;
-  padding-top: 70px;
-  @include margin-responsive();
-}

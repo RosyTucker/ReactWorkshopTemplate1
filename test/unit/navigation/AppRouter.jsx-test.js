@@ -3,11 +3,10 @@ import { Router, Route } from 'react-router';
 import AppRouter from '../../../src/js/navigation/AppRouter';
 import AppWithNav from '../../../src/js/navigation/AppWithNav';
 import Home from '../../../src/js/home/Home';
-import UserHome from '../../../src/js/user/UserHome';
+import Profile from '../../../src/js/user/Profile';
 import ProblemsHome from '../../../src/js/problems/ProblemsHome';
 import LoggedInApp from '../../../src/js/navigation/LoggedInApp';
 import AppRoutes from '../../../src/js/navigation/AppRoutes';
-
 
 describe('AppRouter.jsx', () => {
     const sandbox = new Sandbox();
@@ -53,7 +52,7 @@ describe('AppRouter.jsx', () => {
 
         it('should contain a problems route', () => {
             const problemsRoute = outerRoute.childAt(1);
-            expect(problemsRoute.props().path).to.equal(AppRoutes.problemsHome);
+            expect(problemsRoute.props().path).to.equal(AppRoutes.problems);
             expect(problemsRoute.props().component).to.equal(ProblemsHome);
         });
 
@@ -62,12 +61,19 @@ describe('AppRouter.jsx', () => {
             expect(loggedInApp.props().component).to.equal(LoggedInApp);
         });
 
-        it('should contain a userHome within the logged in app', () => {
+        it('should contain a profile within the logged in app', () => {
             const loggedInApp = outerRoute.childAt(2);
 
             const userHome = loggedInApp.childAt(0);
-            expect(userHome.props().path).to.equal(AppRoutes.userHome);
-            expect(userHome.props().component).to.equal(UserHome);
+            expect(userHome.props().path).to.equal(AppRoutes.profile);
+            expect(userHome.props().component).to.equal(Profile);
+        });
+
+        it('should redirect to home for unknown route as the last option', () => {
+            const redirectRoute = outerRoute.children().last();
+
+            expect(redirectRoute.props().from).to.equal('*');
+            expect(redirectRoute.props().to).to.equal(AppRoutes.home);
         });
     });
 });

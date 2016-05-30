@@ -4,7 +4,7 @@ export default {
         login: 'Sign in',
         home: 'Home',
         problems: 'Problems',
-        userHome: 'Your Profile'
+        profile: 'Your Profile'
     },
     home: {
         bannerAlt: 'Banner',
@@ -23,5 +23,13 @@ export default {
             'banh mi hella. Paleo bitters dreamcatcher, cronut normcore art party beard ' +
             '1 squid semiotics chicharrones intelligentsia.'
         }
+    },
+    profile: {
+        profileTitle: 'Your Profile'
+    },
+    workshops: {
+        title: 'Workshops',
+        attendedTitle: 'Attended',
+        upcomingTitle: 'Upcoming'
     }
 };
