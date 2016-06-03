@@ -46,7 +46,7 @@ const imageLoader = {
 const sassPlugin = new ExtractTextPlugin('application.css', { allChunks: false });
 
 const htmlPlugin = new HtmlWebpackPlugin({
-    title: 'CodeNight',
+    title: 'React Template',
     filename: 'index.html',
     template: PATHS.htmlTemplate
 });

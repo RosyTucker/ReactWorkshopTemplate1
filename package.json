@@ -1,7 +1,7 @@
 {
-  "name": "codenight-react",
+  "name": "template-react",
   "version": "0.0.1",
-  "description": "Codenight Frontend",
+  "description": "Template",
   "main": "src/index.js",
   "scripts": {
     "setup": "./scripts/setup.sh",
@@ -12,22 +12,21 @@
     "dev-server": "./scripts/devServer.sh",
     "dev": "npm run build && npm run dev-server",
     "build-prod": "rm -rf dist && webpack -p",
-    "deploy": "./scripts/deployHeroku.sh",
     "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RosyTucker/CodeNightFrontend.git"
+    "url": "git+https://github.com/RosyTucker/ReactTemplate-Basic.git"
   },
   "keywords": [
-    "codenight"
+    "template"
   ],
   "author": "Rose Tucker",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/RosyTucker/CodeNightFrontend/issues"
+    "url": "https://github.com/RosyTucker/ReactTemplate-Basic/issues"
   },
-  "homepage": "https://github.com/RosyTucker/CodeNightFrontend#readme",
+  "homepage": "https://github.com/RosyTucker/ReactTemplate-Basic#readme",
   "engines": {
     "node": "6.2.0",
     "npm": "3.8.9"
