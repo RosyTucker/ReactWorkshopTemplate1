@@ -4,13 +4,13 @@
   "description": "Template",
   "main": "src/index.js",
   "scripts": {
-    "setup": "./scripts/setup.sh",
-    "lint": "./scripts/lint.sh",
-    "unit": "./scripts/unitTest.sh",
-    "unit-watch": "./scripts/unitTest.sh --watch",
+    "setup": "sh ./scripts/setup.sh",
+    "lint": "sh ./scripts/lint.sh",
+    "unit": "sh ./scripts/unitTest.sh",
+    "unit-watch": "sh ./scripts/unitTest.sh --watch",
     "test": "npm run lint && npm run unit",
     "build": "rm -rf dist && webpack",
-    "dev-server": "./scripts/devServer.sh",
+    "dev-server": "sh ./scripts/devServer.sh",
     "dev": "npm run build && npm run dev-server",
     "build-prod": "rm -rf dist && webpack -p",
     "start": "node server.js"
@@ -33,6 +33,7 @@
     "npm": "3.8.9"
   },
   "devDependencies": {
+    "autoprefixer": "^6.3.6",
     "babel-core": "6.4.5",
     "babel-loader": "6.2.4",
     "babel-polyfill": "6.9.0",
